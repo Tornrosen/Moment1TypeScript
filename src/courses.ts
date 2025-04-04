@@ -86,7 +86,7 @@ function checkUniqueness() : void {
       const filteredCourses = objCourses.filter((course:Course) =>
         course.code.toLowerCase().includes(input.toLowerCase()) 
     )
-    if(filteredCourses>0){
+    if(filteredCourses.length>0){
       addBtnEl.disabled = true;
       if (errorSpace2El) errorSpace2El.innerHTML = "Skriv en unik kurskod!";}
       else {errorSpace2El.innerHTML = "";
